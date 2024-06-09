@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task11</title>
+</head>
+<body>
+    <h1>js task11</h1>
+    /*write a program to print vowel,consonants, count */
+
+function isVowel(char) {
+    char = char.toLowerCase();
+    return char === 'a' || char === 'e' || char === 'i' || char === 'o' || char === 'u';
+}
+
+
+function isConsonant(char) {
+    char = char.toLowerCase();
+    return char >= 'a' && char <= 'z' && !isVowel(char);
+}
+
+
+function analyzeString(str) {
+    let vowels = 0;
+    let consonants = 0;
+    let specialCharacters = 0;
+
+    for (let i = 0; ; i++) {
+        if (str[i] === undefined) break;
+        let char = str[i];
+        if (isVowel(char)) {
+            vowels++;
+        } else if (isConsonant(char)) {
+            consonants++;
+        } else {
+            specialCharacters++;
+        }
+    }
+
+    console.log("Vowels: " + vowels);
+    console.log("Consonants: " + consonants);
+    console.log("Special characters: " + specialCharacters);
+}
+
+
+let testString = "Hello,World!123";
+analyzeString(testString);
+
+<!-- . Program to count vowels and consonants in a given String.
+
+Input: i am ram -->
+function isVowel(char) {
+    char = char.toLowerCase();
+    return char === 'a' || char === 'e' || char === 'i' || char === 'o' || char === 'u';
+}
+
+
+function isConsonant(char) {
+    char = char.toLowerCase();
+    return char >= 'a' && char <= 'z' && !isVowel(char);
+}
+
+
+function analyzeString(str) {
+    let vowels = "";
+    let consonants = "";
+    let specialCharacters = "";
+
+    for (let i = 0; ; i++) {
+        if (str[i] === undefined) break;
+        let char = str[i];
+        if (isVowel(char)) {
+            vowels++;
+        } else if (isConsonant(char)) {
+            consonants++;
+        } else {
+            specialCharacters++;
+        }
+    }
+
+    console.log("Vowels: " + vowels);
+    console.log("Consonants: " + consonants);
+    console.log("Special characters: " + specialCharacters);
+}
+
+
+let testString = "Hello,World!123";
+analyzeString(testString);
+
+
+</body>
+</html>
